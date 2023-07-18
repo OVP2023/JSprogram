@@ -1,2 +1,2 @@
-# JSprogramm
+# JSprogram
 Программы JS без проектов
