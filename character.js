@@ -4,7 +4,6 @@ class Character {
         this.type = type
         this.health = 100
         this.level = 1
-        //console.log(this.name.length)
         if (this.name.length < 2 || this.name.length > 10 || this.name.length == undefined) {
             throw new Error("Неправильное поле name  " + this.name)
         }       
@@ -50,7 +49,7 @@ class Character {
     }
     damage(points){
         if (this.health > 0){
-            this.health = this.health - points * (1 - defence / 100)
+            this.health = this.health - points * (1 - this.defence / 100)
             if (this.health < 0){
                 this.health = 0
             }
@@ -61,9 +60,5 @@ class Character {
         return this.health
     }
 }
-const olegN = new Character ('Oleg','Magician')
-const bobN = new Character ('Bodee','Bowman')
-//const dobN = new Character (232.9,'Bowman')
-console.log(olegN)
-console.log(bobN)
-console.log(bobN.levelUp())
+
+module.exports = Character
